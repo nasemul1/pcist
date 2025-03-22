@@ -4,9 +4,11 @@ import { Link } from 'react-router-dom'
 const About = () => {
   return (
     <div className="flex items-center justify-center">
-      <div className="py-5 px-5 md:py-15 w-full lg:w-[85%] flex flex-col lg:flex-row gap-y-5 gap-x-15">
+      <div className="py-15 px-5 w-full lg:w-[85%] flex flex-col lg:flex-row gap-10">
         <div className="w-full lg:w-1/2 flex items-center">
-          <video src="https://ist.edu.bd/wp-content/uploads/2021/10/pcIST-Presentation-Video.mp4" muted controls controlsList="nodownload"></video>
+          <video muted controls controlsList="nodownload">
+            <source src="https://ist.edu.bd/wp-content/uploads/2021/10/pcIST-Presentation-Video.mp4" type="video/mp4" />
+          </video>
         </div>
         <div className="w-full lg:w-1/2 flex flex-col justify-center">
           <h2 className="text-3xl 2xl:text-5xl text-slate-950 font-semibold">About Us</h2>
