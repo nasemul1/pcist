@@ -1,60 +1,66 @@
 import React, { useState } from 'react'
 import logo from '../assets/logo.svg'
+import { NavLink } from 'react-router-dom'
+import Marquee from "react-fast-marquee";
 
 const Navbar = () => {
-    const [isOpen, setIsOpen] = useState(false);
 
-    return (
-      <nav className="flex items-center justify-between flex-wrap p-6">
-        <div className="flex items-center flex-shrink-0 text-white mr-6 lg:mr-72">
-          <img src={logo} className="w-100 h-10 mr-2" alt="Logo" />
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleClick = () =>{
+    setIsOpen(!isOpen);
+  }
+
+  return (
+    <nav className='fixed z-10 top-0 left-1/2 -translate-x-1/2 w-full lg:w-[85%] flex items-center'>
+      <div className='bg-white p-1'>
+        <NavLink to='/'><img src={logo} className='size-14' alt="logo" /></NavLink>
+      </div>
+      <div className='relative w-full h-16 bg-[#15191A] text-white'>
+        <div className='h-[40%] bg-orange-500 w-full flex items-center text-sm'>
+          <Marquee pauseOnHover gradient={false} speed={50}>
+            <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
+          </Marquee>
         </div>
-        <div className="block lg:hidden">
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="flex items-center px-3 py-2 rounded text-black-500 hover:text-black-400"
-          >
-            <svg
-              className={`fill-current h-3 w-3 ${isOpen ? "hidden" : "block"}`}
-              viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
-            </svg>
-            <svg
-              className={`fill-current h-3 w-3 ${isOpen ? "block" : "hidden"}`}
-              viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path d="M10 8.586L2.929 1.515 1.515 2.929 8.586 10l-7.071 7.071 1.414 1.414L10 11.414l7.071 7.071 1.414-1.414L11.414 10l7.071-7.071-1.414-1.414L10 8.586z" />
-            </svg>
-          </button>
-        </div>
-        <div
-          className={`w-full block flex-grow lg:flex lg:items-center lg:w-auto ${isOpen ? "block" : "hidden"}`}
-        >
-          <div className="text-sm lg:flex-grow">
-            <a href="#" className="block mt-4 lg:inline-block lg:mt-0 text-white-200 mr-4">
-              First Link
-            </a>
-            <a href="#" className="block mt-4 lg:inline-block lg:mt-0 text-white-200 mr-4">
-              Second Link
-            </a>
-            <a href="#" className="block mt-4 lg:inline-block lg:mt-0 text-white-200 mr-4">
-              Third Link
-            </a>
-            <a href="#" className="block mt-4 lg:inline-block lg:mt-0 text-white-200 mr-4">
-              Fourth Link
-            </a>
+        <div className='h-[60%] px-5 flex items-center justify-end lg:justify-between'>
+          <div className='hidden lg:flex gap-5 text-sm'>
+            <NavLink to='/' >Home</NavLink>
+            <NavLink to='/about' >About</NavLink>
+            <NavLink to='/gallery' >Gallery</NavLink>
+            <NavLink to='/events' >Events</NavLink>
+            <NavLink to='/contest' >Contest Tracker</NavLink>
+            <NavLink to='/contact' >Contact</NavLink>
           </div>
-          <div>
-            <button className="inline-flex items-center bg-amber-500 border-0 py-2 px-4 text-white">
-              Click Me
-            </button>
+          <div className='flex items-center gap-5 text-sm'>
+            <NavLink to='/login' >Login</NavLink>
+            <NavLink to='/register' className='hidden lg:block'>Register</NavLink>
+            <div onClick={handleClick} className='block lg:hidden border rounded-full p-1'>
+              { 
+                isOpen===false && <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-4">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+              }
+              {
+                isOpen && <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-4">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12" />
+                </svg>              
+              }
+            </div>
           </div>
         </div>
-      </nav>
-    );
+        {
+          isOpen && <div onClick={handleClick} className='absolute right-0 w-full max-w-[180px] bg-[#15191A] flex flex-col items-end p-5 gap-5 lg:hidden text-sm'>
+            <NavLink to='/' >Home</NavLink>
+            <NavLink to='/about' >About</NavLink>
+            <NavLink to='/gallery' >Gallery</NavLink>
+            <NavLink to='/events' >Events</NavLink>
+            <NavLink to='/contest' >Contest Tracker</NavLink>
+            <NavLink to='/contact' >Contact</NavLink>
+          </div>
+        }
+      </div>
+    </nav>
+  )
 }
 
 export default Navbar
