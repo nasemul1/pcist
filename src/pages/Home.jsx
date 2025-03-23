@@ -4,6 +4,7 @@ import heroImage from '../assets/hero.jpg'
 import Hero from '../components/Hero'
 import About from '../components/About'
 import Alumni from '../components/Alumni'
+import Events from '../components/Events'
 
 const Home = () => {
   return (
@@ -11,6 +12,7 @@ const Home = () => {
       <Hero />
       <About />
       <Alumni />
+      <Events />
     </div>
   )
 }
