@@ -11,7 +11,7 @@ const Events = () => {
         <div className="py-15 px-5 w-full lg:w-[85%]">
             <h2 className='text-center text-2xl text-slate-950 font-semibold px-5 mb-8'>Upcoming Events</h2>
             <div className='mt-10 flex flex-col lg:flex-row items-center justify-center flex-wrap gap-5'>
-                <div className='w-[260px] border rounded-xs overflow-hidden'>
+                <div className='w-[260px] border rounded-sm overflow-hidden'>
                     <img className='w-full' src={coc} alt="" />
                     <div className='p-2'>
                         <p className='text-sm'>17 April 2025 | Tue</p>
@@ -43,6 +43,9 @@ const Events = () => {
                         <button disabled className='px-5 py-1 inline-block mt-2 text-sm rounded-xs bg-orange-500 opacity-50'>Register</button>
                     </div>
                 </div>
+            </div>
+            <div className='mt-10 flex'>
+                <Link className='mx-auto px-5 py-1.5 bg-gray-300 rounded-full'>See More</Link>
             </div>
         </div>
     </div>
