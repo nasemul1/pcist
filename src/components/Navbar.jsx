@@ -12,7 +12,7 @@ const Navbar = () => {
   }
 
   return (
-    <nav className='fixed z-10 top-0 left-1/2 -translate-x-1/2 w-full lg:w-[85%] flex items-center'>
+    <nav className='fixed z-10 top-0 lg:top-2 lg:rounded-sm lg:overflow-hidden shadow-lg left-1/2 -translate-x-1/2 w-full lg:w-[85%] flex items-center'>
       <div className='bg-white p-1'>
         <NavLink to='/'><img src={logo} className='size-14' alt="logo" /></NavLink>
       </div>
@@ -26,7 +26,7 @@ const Navbar = () => {
           <div className='hidden lg:flex gap-5 text-sm'>
             <NavLink to='/' >Home</NavLink>
             <NavLink to='/about' >About</NavLink>
-            <NavLink to='/gallery' >Gallery</NavLink>
+            <NavLink to='/blog' >Blog</NavLink>
             <NavLink to='/events' >Events</NavLink>
             <NavLink to='/contest' >Contest Tracker</NavLink>
             <NavLink to='/contact' >Contact</NavLink>
