@@ -3,3 +3,8 @@
 a.active{
     color: #FE9A00;
 }
+
+footer a>svg{
+    width: 24px;
+    height: 24px;
+}

@@ -32,12 +32,12 @@ const Blog = () => {
 
   return (
     <div className='w-full flex justify-center py-15'>
-        <div className='w-full lg:w-[85%]'>
+        <div className='px-5 lg:px-5 w-full lg:w-[85%]'>
             <h2 className='text-center text-2xl text-slate-950 font-semibold px-5 mb-8'>Blogs</h2>
             <div className='w-full flex flex-wrap justify-center gap-5'>
                 {
                     contents.map((content, index) => (
-                        <div key={index} className="w-full lg:w-[260px] shadow-xl rounded-lg p-3">
+                        <div key={index} className="w-full md:w-[260px] shadow-xl rounded-lg p-3">
                             <img className='h-[150px] w-full rounded-sm' src={content.img} alt="" />
                             <p className='mt-2 text-xs'>{content.author}</p>
                             <h3 className='text-xl font-semibold'>{content.title}</h3>
