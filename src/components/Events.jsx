@@ -45,7 +45,7 @@ const Events = () => {
                 </div>
             </div>
             <div className='mt-10 flex'>
-                <Link className='mx-auto px-5 py-1.5 bg-gray-300 rounded-full'>See More</Link>
+                <Link to="/events" className='mx-auto px-5 py-1.5 bg-gray-300 rounded-full'>See More</Link>
             </div>
         </div>
     </div>

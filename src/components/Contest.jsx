@@ -1,5 +1,6 @@
 import React from 'react'
 import cf from '../assets/logo/codeforces.png'
+import { Link } from 'react-router-dom'
 
 const Contest = () => {
   return (
@@ -25,6 +26,15 @@ const Contest = () => {
                     <h3 className='mt-3 text-[18px] font-medium'>Codeforces Round 1013 (Div. 3)</h3>
                     <a className='inline-block mt-3 px-5 py-1 bg-orange-400 rounded-xs' target='_blank' href="">Visit</a>
                 </div>
+                <div className='w-[260px] border p-5 rounded-sm'>
+                    <img className='w-full' src={cf} alt="" />
+                    <p className='mt-2 text-sm'>25 March 2025 | Tue</p>
+                    <h3 className='mt-3 text-[18px] font-medium'>Codeforces Round 1013 (Div. 3)</h3>
+                    <a className='inline-block mt-3 px-5 py-1 bg-orange-400 rounded-xs' target='_blank' href="">Visit</a>
+                </div>
+            </div>
+            <div className='mt-10 flex'>
+                <Link to="/contest" className='mx-auto px-5 py-1.5 bg-gray-300 rounded-full'>See More</Link>
             </div>
         </div>
     </div>
