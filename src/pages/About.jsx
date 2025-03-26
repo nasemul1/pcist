@@ -30,8 +30,8 @@ const About = () => {
             </div>
         </div>
         <div className='w-full lg:w-[85%] mx-auto py-10 px-5 lg:px-0 flex flex-col items-center justify-center gap-5'>
-            <p className='text-center'>Founded in 2007, pcIST is a thriving programming club committed to fostering a community of passionate coders and technology enthusiasts. Based at the Institute of Science and Technology, Dhanmondi, we strive to equip students with the essential skills, knowledge, and confidence to excel in the ever-evolving world of programming and technology. At pcIST, we believe in learning through experience. We organize a diverse range of activities, including hands-on coding workshops, competitive programming contests, technical seminars, and exciting tech fests. These initiatives create a dynamic environment where students can enhance their problem-solving skills, collaborate with like-minded peers, and stay ahead of emerging technologies. Whether you're a beginner taking your first steps into programming or an experienced coder looking to sharpen your skills, pcIST welcomes you to be a part of this journey of innovation and growth. Together, we code, compete, and create the future!</p>
-            <div className='mt-5 w-full'>
+            <p className='text-justify'>Founded in 2007, pcIST is a thriving programming club committed to fostering a community of passionate coders and technology enthusiasts. Based at the Institute of Science and Technology, Dhanmondi, we strive to equip students with the essential skills, knowledge, and confidence to excel in the ever-evolving world of programming and technology. At pcIST, we believe in learning through experience. We organize a diverse range of activities, including hands-on coding workshops, competitive programming contests, technical seminars, and exciting tech fests. These initiatives create a dynamic environment where students can enhance their problem-solving skills, collaborate with like-minded peers, and stay ahead of emerging technologies. Whether you're a beginner taking your first steps into programming or an experienced coder looking to sharpen your skills, pcIST welcomes you to be a part of this journey of innovation and growth. Together, we code, compete, and create the future!</p>
+            <div className='mt-10 w-full'>
                 <div className='mb-5 flex flex-col items-center gap-2'>
                     <h3 className='text-2xl text-center font-semibold'>WHAT WE OFFER</h3>
                     <hr className='w-[260px] border border-orange-500'/>
@@ -60,7 +60,7 @@ const About = () => {
                     </div>
                 </div>
             </div>
-            <div className='mt-5 w-full'>
+            <div className='mt-10 w-full'>
                 <div className='mb-5 flex flex-col items-center gap-2'>
                     <h3 className='text-2xl text-center font-semibold'>COMMITTEE MEMBERS</h3>
                     <hr className='w-[320px] border border-orange-500'/>
