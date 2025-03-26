@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-const About = () => {
+const ComAbout = () => {
   return (
     <div className="flex items-center justify-center">
       <div className="py-15 px-5 w-full lg:w-[85%] flex flex-col lg:flex-row gap-10">
@@ -22,4 +22,4 @@ const About = () => {
   )
 }
 
-export default About
+export default ComAbout;
